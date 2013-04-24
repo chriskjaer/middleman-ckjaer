@@ -1,0 +1,22 @@
+//
+// BASE Global Styling - Primarily Single Selectors
+// -----------------------------------------
+
+html {
+	-webkit-font-smoothing: antialiased;
+	color: $font-color;
+}
+
+body {
+	background: $body-color;
+}
+
+// Force images to scale down to their container widths.
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+%clearfix {
+	@include clearfix;
+}

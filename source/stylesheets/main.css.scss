@@ -1,0 +1,48 @@
+//
+// MANIFEST FILE
+//
+// All SCSS files gets imported here
+// ---------------------------------------------
+
+// Libraries
+// ---------------------------------------------
+@import 
+	'compass',
+	'h5bp',
+	'susy';
+
+// HTML5 Boilerplate Styles
+@include h5bp-normalize;
+@include h5bp-base-styles;
+
+
+// Global 
+// ---------------------------------------------
+@import 
+	'global/colors',
+	'global/typography',
+	'global/settings',
+	'global/helpers',
+	'global/base';
+
+// Layout
+// ---------------------------------------------
+@import 
+	'layout/header',
+	'layout/content',
+	'layout/main',
+	'layout/footer';
+ 
+
+// Modules
+// ---------------------------------------------
+//@import 'modules/sticky-footer'; 
+@import 
+	'modules/buttons';
+
+
+// States
+// ---------------------------------------------
+@import 
+	'states/tablet',
+	'states/desktop';
