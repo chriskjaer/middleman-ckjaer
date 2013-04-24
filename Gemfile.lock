@@ -98,7 +98,7 @@ GEM
     sprockets-sass (0.9.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
-    susy (1.0.5)
+    susy (1.0.8)
       compass (>= 0.12.2)
       sass (>= 3.2.0)
     syntax (1.0.0)
@@ -117,4 +117,4 @@ DEPENDENCIES
   compass-h5bp (~> 0.1.0)
   middleman (~> 3.0.12)
   middleman-livereload
-  susy (~> 1.0.5)
+  susy (~> 1.0.7)

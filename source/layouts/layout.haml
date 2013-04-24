@@ -19,17 +19,13 @@
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
     = stylesheet_link_tag "main"
-    = javascript_include_tag "libs/modernizr-2.6.1.min"
+    = javascript_include_tag "libs/modernizr-2.6.1.min", "libs/respond.min.js"
 
   %body{:class => "#{@bodyclass}"}
-    .container
-      %header
-        %h1 Header
-        
-      .content{:role => "main"}
+    .container.content{:role => "main"}
 
-        -# Page content gets rendered here
-        = yield
+      -# Page content gets rendered here
+      = yield
 
       %footer
 

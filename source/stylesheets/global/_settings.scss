@@ -5,8 +5,6 @@
 $base-font-size: 16px;
 @include establish-baseline;
 
-$border-radius: 4px;
-
 // border-box-sizing()
 @include border-box-sizing;
 
@@ -28,6 +26,7 @@ $tablet:    12;
 $desktop:   16;
 
 $container-style: fluid;
+
 .container {
   // Include `container` if this element will contain a grid system.
   @include container($total-columns);
@@ -38,9 +37,6 @@ $container-style: fluid;
 // to responsive layouts.
 
 $layouts: $tablet, $desktop;
-
-$onethird:  $total-columns/3, $total-columns;
-$onefourth: $total-columns/4, $total-columns;
 
 @each $layout in $layouts {
   @include at-breakpoint($layout) {
