@@ -1,6 +1,14 @@
 //
-// Tablet and upwards
+// Tablet and Upwards
 // ---------------------------
 
 @include at-breakpoint($tablet){
+}
+
+
+//
+// Only Tablet
+// ---------------------------
+
+@include at-breakpoint(container-outer-width($tablet) container-outer-width($desktop)) {
 }

@@ -1,5 +1,6 @@
 //
 // Class, SASS Variables and SASSS Mixins
+// Use @extend for this.
 // ------------------------------------------
 
 
@@ -9,4 +10,8 @@
 
 %huge-font {
 	font-size: 5em;
+}
+
+%clearfix {
+  @include clearfix;
 }

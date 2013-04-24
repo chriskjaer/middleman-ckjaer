@@ -1,9 +1,11 @@
 //
-// BASE Global Styling - Primarily Single Selectors
+// BASE Global Styling
+// 
+// Primarily Single Selectors
 // -----------------------------------------
 
 html {
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased; // Anti-Aliasing on Chrome/Safari mac.
 	color: $font-color;
 }
 
@@ -15,8 +17,4 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-%clearfix {
-	@include clearfix;
 }

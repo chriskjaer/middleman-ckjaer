@@ -4,7 +4,10 @@
 
 # Susy grids in Compass
 require 'susy'
+
+# LiveReload - http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
 activate :livereload
+
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
