@@ -1,36 +1,30 @@
 !!! 5
-/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-/[if IE 7]    <html class="no-js lt-ie9 lt-ie8">
-/[if IE 8]    <html class="no-js lt-ie9">
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7 lang="#{data.site.lang}"">
+/[if IE 7]    <html class="no-js lt-ie9 lt-ie8 lang="#{data.site.lang}"">
+/[if IE 8]    <html class="no-js lt-ie9 lang="#{data.site.lang}"">
 <!--[if gt IE 8]><!-->
-%html{:class => "no-js"}
+%html{:class => "no-js", :lang => "#{data.site.lang}"}
   <!--<![endif]-->
   %head
     %meta{:charset => "utf-8"}
     %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge,chrome=1"}
 
     -# Pull in the page title
-    %title= "Project - " + @title
+    %title= yield_content(:title).blank? ? data.site.title : yield_content(:title) + " - " + data.site.title
 
-    %meta{:name => "description", :content => ""}
-    %meta{:name => "author", :content => ""}
+    %meta{:name => "description", :content => "#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"}
+    %meta{:name => "author", :content => "#{data.site.author}"}
     %meta{:name =>"viewport", :content => "width=device-width"}
 
-    -# Place favicon.ico and apple-touch-icon.png in the root directory
-
     = stylesheet_link_tag "main"
-    = javascript_include_tag "libs/modernizr-2.6.1.min", "libs/respond.min.js"
+    = javascript_include_tag "application-top"
 
   %body{:class => "#{@bodyclass}"}
     .container.content{:role => "main"}
 
-      -# Page content gets rendered here
+      -# Render Content here.
       = yield
 
       %footer
 
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
-    :javascript
-      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
-
-    = javascript_include_tag "plugins", "script"
+    = javascript_include_tag "application-bottom"
