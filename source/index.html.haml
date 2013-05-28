@@ -8,3 +8,9 @@
 
 
 = partial "partials/dummy"
+
+
+// Placeimage Helper - Picks random if nothing is defined
+= placeimage(:width => 300, :height => 300)
+// It can be anything from sheen or cage, to kitten or dog. Check helper in Config.rb
+= placeimage(:width => 300, :height => 300, :place => 'cage')
