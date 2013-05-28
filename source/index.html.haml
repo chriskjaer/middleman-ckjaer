@@ -1,13 +1,15 @@
 - @title = "New Project"
 - @bodyclass = "insert-body-class-here"
 
-.GoGoGo
-  :markdown
-    ## Use Markdown is you want, or delete the :markdown and write in pure HAML.
-    [Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
+
+:markdown
+  ### Page Header
+
+  Use Markdown is you want, or delete the :markdown and write in pure HAML.
+  [Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
 
 
-= partial "partials/dummy"
+= partial :partial
 
 
 // Placeimage Helper - Picks random if nothing is defined
