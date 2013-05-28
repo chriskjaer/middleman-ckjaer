@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~> 3.0.12"
-gem "middleman-livereload"
+gem 'middleman', '~> 3.1.0.rc.1'
+gem 'middleman-livereload'
+gem 'middleman-smusher'
 
 # Compass plugins
-gem 'susy', "~> 1.0.5" # Susy
-gem 'compass-h5bp', "~> 0.1.0" # HTML5 Boilerplate styles
+gem 'susy'
+gem 'compass-h5bp'
