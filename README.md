@@ -1,5 +1,5 @@
-# Middleman Boilerplate
+# Protostorm!
+### An Awesome Boilerplate For Middleman
 
-Based on Amicus boilerplate.
 
 HAML, SCSS, Compass + SUSY, LiveReload
