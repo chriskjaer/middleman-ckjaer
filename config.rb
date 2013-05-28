@@ -6,7 +6,6 @@
   require 'susy'
 
   # LiveReload 
-  # // http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
   activate :livereload
 
   # Change Compass configuration
@@ -32,7 +31,7 @@
 
 
 
-# Page command
+# Page Layouts
 # --------------------------
 
   # Per-page layout changes:
@@ -124,19 +123,29 @@
 # Build Config
 # --------------------------
   configure :build do
+    # Make favicons
+    # use: https://github.com/follmann/middleman-favicon-maker
+    activate :favicon_maker
 
-    ### Use relative URLs
-    activate :relative_assets  
-    # activate :minify_css
-    # activate :minify_javascript
-    # activate :cache_buster
+    # Minify
+    # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images
+    activate :minify_css
+    activate :minify_javascript
 
-    ### Compress PNGs after build
-    # require "middleman-smusher"
-    # activate :smusher
+    # Enable cache buster
+    # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/improving-cacheability.html.markdown#cache-buster-in-query-string
+    activate :cache_buster
 
-    ### Use different image path
-    # set :http_path, "/Content/images/"
+    # Use relative URLs
+    # activate :relative_assets
+
+    # Compress PNGs after build
+    # use: https://github.com/middleman/middleman-smusher
+    activate :smusher
+
+    # Gzip HTML, CSS, and JavaScript
+    # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#gzip-text-files
+    activate :gzip
   end
 
 
