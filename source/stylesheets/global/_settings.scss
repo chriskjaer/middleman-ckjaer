@@ -1,15 +1,4 @@
 //
-// Settings
-// -------------------------------
-
-$base-font-size: 16px;
-@include establish-baseline;
-
-// border-box-sizing()
-@include border-box-sizing;
-
-
-//
 // Responsive Grid Settings (SUSY)
 // -------------------------------
 
@@ -25,25 +14,37 @@ $grid-padding:    $gutter-width;
 $tablet:    12; 
 $desktop:   16;
 
+// Container style
 $container-style: fluid;
 
 .container {
-  // Include `container` if this element will contain a grid system.
-  @include container($total-columns);
-  @include susy-grid-background;
+  @include container($total-columns);         // Include this, if this should contain the grid system
+  max-width: container-outer-width($desktop); // Set container width to be the same size as our desktop breakpoint
 }
 
 // Automatically reset the grid width & re-apply the grid background
 // to responsive layouts.
-
 $layouts: $tablet, $desktop;
 
 @each $layout in $layouts {
   @include at-breakpoint($layout) {
-
     .container {
       @include set-container-width;
-      @include susy-grid-background;
+      @if $show-grid-backgrounds == true {
+        @include susy-grid-background;
+      }
     }
   }
 }
+
+
+
+//
+// Settings
+// -------------------------------
+
+$base-font-size: 16px;
+@include establish-baseline;
+
+// border-box-sizing()
+@include border-box-sizing;
