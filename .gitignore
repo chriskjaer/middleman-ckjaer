@@ -2,3 +2,8 @@
 build/
 .sass-cache
 bin/
+
+
+/vendor/javascripts/*/*
+!/vendor/javascripts/*/*component.json
+!/vendor/javascripts/*/*bower.json
