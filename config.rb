@@ -116,6 +116,9 @@
   ### Change the images directory
   # set :images_dir, "alternative_image_directory"
 
+  ### Set partials directory
+  set :partials_dir, 'partials'
+
 
 
 # Build Config
