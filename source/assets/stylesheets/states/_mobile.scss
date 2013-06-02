@@ -3,4 +3,11 @@
 // ---------------------------
 
 @include at-breakpoint(0em container-outer-width($tablet)) { 
+  
+
+  // Dummy Module
+  // ----------------------
+  @include dummy-tablet
+
+
 }

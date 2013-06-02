@@ -3,8 +3,9 @@
 // -------------------------------
 
 $show-grid-backgrounds: false;
+$container-style: fluid;
 
-// Mobile Layout
+// Container Settings
 $total-columns:   8;
 $column-width:    3em;
 $gutter-width:    1em;
@@ -14,18 +15,17 @@ $grid-padding:    $gutter-width;
 $tablet:    12; 
 $desktop:   16;
 
-// Container style
-$container-style: fluid;
+$layouts: $tablet, $desktop;
+
 
 .container {
   @include container($total-columns);         // Include this, if this should contain the grid system
   max-width: container-outer-width($desktop); // Set container width to be the same size as our desktop breakpoint
 }
 
+
 // Automatically reset the grid width & re-apply the grid background
 // to responsive layouts.
-$layouts: $tablet, $desktop;
-
 @each $layout in $layouts {
   @include at-breakpoint($layout) {
     .container {

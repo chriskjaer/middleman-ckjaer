@@ -1,0 +1,34 @@
+// Dummy Module - I'm just an example, please delete me.
+// ---------------------------------------------
+.dummy {
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+
+// Layout -- Desktop -- Include me in the proper state file
+// -----------------------------
+@mixin dummy-desktop {
+  .dummy {
+    
+  }
+}
+
+
+// Layout -- Tablet -- Include me in the proper state file
+// -----------------------------
+@mixin dummy-tablet {
+  .dummy {
+    
+  }
+}
+
+
+// Layout -- Mobile -- Include me in the proper state file
+// -----------------------------
+@mixin dummy-mobile {
+  .dummy {
+    
+  }
+}

@@ -1,20 +1,17 @@
-//
+
 // Base Colors
 // ---------------------------
-$black: black;
-$white: white;
-$red: red;
-$green: green;
-$orange: orange;
-$purple: purple;
-$yellow: yellow;
-$blue: blue;
-$grey: #ccc;
+$primary: tomato;       // Tomato Red
+$secondary: papayawhip; // Beige
+$tertiary: whitesmoke;  // Greyish White
 
-//
+$dark: #000000;         // Base Dark Color
+$light: #ffffff;        // Base White Color
+
+
 //  Website Colors
 // ---------------------------
 
-$body-color: $white;
+$body-color: $tertiary;
 
-$font-color: lighten($black, 10%);
+$font-color: lighten($dark, 10%);

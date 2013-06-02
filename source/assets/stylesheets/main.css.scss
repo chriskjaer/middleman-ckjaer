@@ -9,7 +9,8 @@
 @import 
 	'compass',
 	'h5bp',
-	'susy';
+	'susy'
+	;
 
 // HTML5 Boilerplate Styles
 @include h5bp-normalize;
@@ -23,21 +24,26 @@
 	'global/typography',
 	'global/settings',
 	'global/helpers',
-	'global/base';
+	'global/base-styles'
+	;
 
-// Layout
+
+// Layout For Regions & Page Types
 // ---------------------------------------------
 @import 
 	'layout/header',
 	'layout/content',
-	'layout/footer';
- 
+	'layout/footer'
+	;
+
 
 // Modules
 // ---------------------------------------------
 @import 
 	'modules/buttons',
-	'modules/forms';
+	'modules/forms',
+	'modules/dummy'
+	;
 
 
 // States
@@ -45,4 +51,7 @@
 @import 
 	'states/desktop',
 	'states/tablet',
-	'states/mobile';
+	'states/mobile'
+	;
+
+

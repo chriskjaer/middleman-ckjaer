@@ -1,17 +1,39 @@
 //
-// Class, SASS Variables and SASSS Mixins
-// Use @extend for this.
+// Class, SASS Variables and SASS Mixins
+// Use @extend for this 
+// or mixin if used in mediaquery
 // ------------------------------------------
-
-
-%uppercase {
-	text-transform: uppercase;
-}
-
-%huge-font {
-	font-size: 5em;
-}
 
 %clearfix {
   @include clearfix;
+}
+
+%pie-clearfix {
+  @include pie-clearfix;
+}
+
+@mixin truncate {
+  // Apply width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  %truncate {
+    @include truncate;
+  }
+
+
+// Extend Examples
+%shadowBorder {
+  @include box-shadow(0 1px 5px rgba($dark,0.2));
+  border: {
+    style: solid;
+    color: $light;
+    size: 3px;
+  }
+}
+
+%thumbnail--round {
+  @include border-radius(50%);
+  @extend %shadowBorder;
 }
