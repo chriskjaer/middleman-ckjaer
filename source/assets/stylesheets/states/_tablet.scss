@@ -4,10 +4,6 @@
 
 @include at-breakpoint($tablet){
 
-  
-  // Dummy Module
-  // ----------------------
-  @include dummy-tablet // Include here, if tablet and upwards, or below if only tablet.
 }
 
 
@@ -16,4 +12,6 @@
 // ---------------------------
 
 @include at-breakpoint(container-outer-width($tablet) container-outer-width($desktop)) {
+  @include dummy-page-tablet;
+  @include dummy-tablet;
 }

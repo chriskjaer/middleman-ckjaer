@@ -48,3 +48,5 @@ $base-font-size: 16px;
 
 // border-box-sizing()
 @include border-box-sizing;
+
+$spacing: $gutter-width;

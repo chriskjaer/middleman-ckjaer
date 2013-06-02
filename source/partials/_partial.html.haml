@@ -1,3 +1,6 @@
-:markdown
-  I'm a dummy partial.
-  Use: = partial :partial to include partials
+%h3 Dummy Partial
+
+%p= lorem.sentences 2
+
+%blockquote.blockquote= truncate(lorem.sentence, :length => 40)
+%p.cite= lorem.name

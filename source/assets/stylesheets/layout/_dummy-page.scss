@@ -1,0 +1,52 @@
+//
+// Dummy Page Layout
+// ---------------------------------------------
+
+.dummy-page {
+  text-align: center;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary;
+  }
+  img {
+    @extend %thumbnail--round;
+  }
+}
+
+.dummy-wrapper {
+  @extend %pie-clearfix;
+}
+
+
+// Layout -- Desktop -- Include me in the proper state file
+// -----------------------------
+@mixin dummy-page-desktop {
+  .dummy-page {
+    h1 {
+      font-size: 500%;
+    }
+  }
+}
+
+
+// Layout -- Tablet -- Include me in the proper state file
+// -----------------------------
+@mixin dummy-page-tablet {
+  .dummy-page {
+    h1 {
+      font-size: 350%;
+    }
+  }
+}
+
+
+// Layout -- Mobile -- Include me in the proper state file
+// -----------------------------
+@mixin dummy-page-mobile {
+  .dummy-page {
+    h1 {
+      font-size: 200%;
+    }
+  }
+}

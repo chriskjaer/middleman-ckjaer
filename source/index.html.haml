@@ -1,19 +1,33 @@
 ---
 title: Index
+page_class: dummy-page
 ---
 
-%h1.dummy Protostorm!
+%h1 Protostorm!
 
 :markdown
+  Middleman Protostorm is a way to quickly create prototypes for websites. It's using Sass as the CSS preprocessor which includes Compass along with SUSY. It's using Bower for JS package management.
 
-  Use Markdown is you want, or delete the :markdown and write in pure HAML.
-  [Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
+  Middleman Protostorm is using the Sassy Protostorm Boilerplate. Sassy Protostorm is not
+  a framework, but a way to structure your Sass. It's draws inspiration from various sources, like [BEM](http://bem.info/), [SMACCS](http://smacss.com/) and general OOCSS.
+
+%h1 Partials
+.dummy-wrapper
+  - 3.times do
+    .dummy
+      // See source/partials
+      = partial :partial
 
 
-= partial :partial
+%h1 Image Helper
 
+%h2 3 Times Random
+// 3 Times random (Nothing specified, Check helper in Config.rb for all the options)
+- 3.times do
+  = placeimage(:width => 200, :height => 200)
 
-// Placeimage Helper - Picks random if nothing is defined
-= placeimage(:width => 300, :height => 300)
-// It can be anything from sheen or cage, to kitten or dog. Check helper in Config.rb
-= placeimage(:width => 300, :height => 300, :place => 'cage')
+%h2 3 Times Cage
+// 3 Times Cage!
+= placeimage(:width => 200, :height => 200, :place => 'cage')
+= placeimage(:width => 200, :height => 200, :place => 'cage', :color => false)
+= placeimage(:width => 200, :height => 200, :place => 'cage', :cage => 'crazy')

@@ -25,15 +25,31 @@
 
 // Extend Examples
 %shadowBorder {
-  @include box-shadow(0 1px 5px rgba($dark,0.2));
+  @include box-shadow(0 1px 5px rgba($dark,0.3));
   border: {
     style: solid;
     color: $light;
-    size: 3px;
+    width: 5px;
   }
 }
 
-%thumbnail--round {
-  @include border-radius(50%);
-  @extend %shadowBorder;
+%space {
+  margin-bottom: $spacing/2;
+  margin-top: $spacing/2;
 }
+
+%box {
+  @include border-radius(3px);
+  @extend %shadowBorder;
+  @extend %space;
+  background-color: $light;
+}
+
+%thumbnail {
+  @extend %shadowBorder; 
+  @extend %space;
+}
+  %thumbnail--round {
+    @extend %thumbnail;
+    @include border-radius(50%);
+  }

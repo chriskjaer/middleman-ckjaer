@@ -4,10 +4,8 @@
 
 @include at-breakpoint(0em container-outer-width($tablet)) { 
   
-
-  // Dummy Module
-  // ----------------------
-  @include dummy-tablet
-
+  @include dummy-page-mobile;
+  @include dummy-mobile
+  
 
 }

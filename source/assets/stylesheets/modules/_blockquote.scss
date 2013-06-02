@@ -1,0 +1,20 @@
+.blockquote {
+  font-style: italic;
+  color: lighten($dark,25%);
+  &:before, &:after {
+    content: "\"";
+  }
+}
+
+.blockquote + .cite {
+  margin-top: -#{$spacing/2};
+}
+
+.cite {
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  &:before {
+    content: "- ";
+  }
+}

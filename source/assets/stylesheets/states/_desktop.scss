@@ -3,4 +3,8 @@
 // ---------------------------
 
 @include at-breakpoint($desktop) {
+
+  @include dummy-page-desktop;
+  @include dummy-desktop;
+  
 }

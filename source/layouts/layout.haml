@@ -22,12 +22,13 @@
     = javascript_include_tag "application-top"
 
   %body
-    .container.content{:role => "main"}
+    .container
+      %header.header
 
-      -# Render Content here.
-      %h1= data.page.test
-      = yield
+      .content{:role => "main", :class => "#{data.page.page_class}"}
+        -# Render Content here.
+        = yield
 
-      %footer
+      %footer.footer
 
     = javascript_include_tag "application-bottom"

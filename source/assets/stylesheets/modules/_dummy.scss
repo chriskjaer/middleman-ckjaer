@@ -1,9 +1,9 @@
+//
 // Dummy Module - I'm just an example, please delete me.
 // ---------------------------------------------
 .dummy {
-  text-align: center;
-  text-transform: uppercase;
-  color: $primary;
+  @extend %box;
+  padding: $spacing;
 }
 
 
@@ -11,7 +11,8 @@
 // -----------------------------
 @mixin dummy-desktop {
   .dummy {
-    
+    @include span-columns(4,12);
+    @include nth-omega(3n);
   }
 }
 
@@ -20,7 +21,8 @@
 // -----------------------------
 @mixin dummy-tablet {
   .dummy {
-    
+    @include span-columns(6,12);
+    @include nth-omega(2n);
   }
 }
 

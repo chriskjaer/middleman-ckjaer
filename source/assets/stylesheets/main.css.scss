@@ -33,6 +33,7 @@
 @import 
 	'layout/header',
 	'layout/content',
+	'layout/dummy-page',
 	'layout/footer'
 	;
 
@@ -40,9 +41,10 @@
 // Modules
 // ---------------------------------------------
 @import 
+	'modules/dummy',
 	'modules/buttons',
 	'modules/forms',
-	'modules/dummy'
+	'modules/blockquote'
 	;
 
 
@@ -54,4 +56,10 @@
 	'states/mobile'
 	;
 
+
+// Quick and Dirty late-minute hacks
+// ---------------------------------------------
+@import
+	'global/shame'
+	;
 
