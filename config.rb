@@ -107,13 +107,13 @@
 # --------------------------
 
   ### Change the CSS directory
-  # set :css_dir, "alternative_css_directory"
+  set :css_dir, "assets/stylesheets"
 
   ### Change the JS directory
-  # set :js_dir, "alternative_js_directory"
+  set :js_dir, "assets/javascripts"
 
   ### Change the images directory
-  # set :images_dir, "alternative_image_directory"
+  set :images_dir, "assets/images"
 
   ### Set partials directory
   set :partials_dir, 'partials'
@@ -137,7 +137,7 @@
     activate :cache_buster
 
     # Use relative URLs
-    # activate :relative_assets
+    activate :relative_assets
 
     # Compress PNGs after build
     # use: https://github.com/middleman/middleman-smusher

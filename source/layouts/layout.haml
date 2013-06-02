@@ -10,19 +10,22 @@
     %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge,chrome=1"}
 
     -# Pull in the page title
-    %title= yield_content(:title).blank? ? data.site.title : yield_content(:title) + " - " + data.site.title
+    %title
+      = data.site.title unless data.page.title?
+      = data.page.title + ' - ' + data.site.title if data.page.title?
 
-    %meta{:name => "description", :content => "#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"}
+    %meta{:name => "description", :content => "#{data.site.description}"}
     %meta{:name => "author", :content => "#{data.site.author}"}
     %meta{:name =>"viewport", :content => "width=device-width"}
 
     = stylesheet_link_tag "main"
     = javascript_include_tag "application-top"
 
-  %body{:class => "#{@bodyclass}"}
+  %body
     .container.content{:role => "main"}
 
       -# Render Content here.
+      %h1= data.page.test
       = yield
 
       %footer
