@@ -18,6 +18,6 @@ Middleman Protostorm is using the Sassy Protostorm Boilerplate. Sassy Protostorm
 
 ..and you should be up and running on http://0.0.0.0:4567
 
-### Push to Heroku
+### Pushing to Heroku
 
     $ heroku create projectname && git push heroku master
