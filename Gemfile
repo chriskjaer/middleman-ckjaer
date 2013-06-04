@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# Heroku
-gem 'heroku'
-
 # Middleman
 gem 'middleman', '~> 3.1.0.rc.1'
 gem 'middleman-livereload'
