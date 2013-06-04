@@ -12,7 +12,7 @@ Middleman Protostorm is using the Sassy Protostorm Boilerplate. Sassy Protostorm
 
     $ bundle install
 
-    $ bower install
+    $ bower update
 
     $ middleman
 
