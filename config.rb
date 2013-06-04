@@ -125,7 +125,7 @@
   configure :build do
     # Make favicons
     # use: https://github.com/follmann/middleman-favicon-maker
-    activate :favicon_maker
+    # activate :favicon_maker
 
     # Minify
     # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images
