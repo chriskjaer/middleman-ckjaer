@@ -78,25 +78,27 @@
       services = ["http://placecage.com", "http://nicenicejpg.com", "http://baconmockup.com", "http://placedog.com", "http://placesheen.com", "http://lorempixel.com", "http://fillmurray.com", "http://placekitten.com"]
 
       img  = "<img src=\""
-
+      mustache = ""
+      mustache << "http://mustachify.me/?src=" if opts[:mustache] == true
       ### Services - make it into a nice loop someday...
-      img << "http://placecage.com"   if opts[:place] == "cage"
-      img << "http://nicenicejpg.com" if opts[:place] == "vanilla"
-      img << "http://baconmockup.com" if opts[:place] == "bacon"
-      img << "http://placedog.com"    if opts[:place] == "dog"
-      img << "http://placesheen.com"  if opts[:place] == "sheen"
-      img << "http://lorempixel.com"  if opts[:place] == "loremimage"
-      img << "http://fillmurray.com"  if opts[:place] == "murray"
-      img << "http://placekitten.com" if opts[:place] == "kitten"
+      url = ""
+      url << "http://placecage.com"   if opts[:place] == "cage"
+      url << "http://nicenicejpg.com" if opts[:place] == "vanilla"
+      url << "http://baconmockup.com" if opts[:place] == "bacon"
+      url << "http://placedog.com"    if opts[:place] == "dog"
+      url << "http://placesheen.com"  if opts[:place] == "sheen"
+      url << "http://lorempixel.com"  if opts[:place] == "loremimage"
+      url << "http://fillmurray.com"  if opts[:place] == "murray"
+      url << "http://placekitten.com" if opts[:place] == "kitten"
 
-      img << services.sample          if opts[:place] == nil # Pick random, if nothing is defined
-      img << "/g"                     if opts[:color] == false # If color is false, make it grey (For those who supports it)
-      img << "/c"                     if opts[:place] == "cage" && opts[:cage] == "crazy" # Crazy cage!
-      img << "/#{opts[:width]}/#{opts[:height]}" # Width/Height
-      img << "/#{opts[:tags]}/"       if opts[:tags] # Lorem Image Tags - E.g. sports
-      img << "\" />" # Close image tag
+      url << services.sample          if opts[:place] == nil # Pick random, if nothing is defined
+      url << "/g"                     if opts[:color] == false # If color is false, make it grey (For those who supports it)
+      url << "/c"                     if opts[:place] == "cage" && opts[:cage] == "crazy" # Crazy cage!
+      url << "/#{opts[:width]}/#{opts[:height]}" # Width/Height
+      url << "/#{opts[:tags]}/"       if opts[:tags] # Lorem Image Tags - E.g. sports
+      img_close = "\" />" # Close image tag
       
-      img
+      img + mustache + url + img_close
     end
 
   end
