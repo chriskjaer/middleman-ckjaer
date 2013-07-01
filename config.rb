@@ -96,7 +96,12 @@
       url << "/c"                     if opts[:place] == "cage" && opts[:cage] == "crazy" # Crazy cage!
       url << "/#{opts[:width]}/#{opts[:height]}" # Width/Height
       url << "/#{opts[:tags]}/"       if opts[:tags] # Lorem Image Tags - E.g. sports
-      img_close = "\" />" # Close image tag
+      img_close = "\" "
+      img_close << " class='#{opts[:class]}' " if opts[:class]
+      img_close << " alt='image' "
+      img_close << " height='#{opts[:height]}' "
+      img_close << " width='#{opts[:width]}' "
+      img_close << "/>" # Close image tag
       
       img + mustache + url + img_close
     end
